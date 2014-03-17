@@ -6,6 +6,7 @@ RUN apt-get update
 RUN apt-get -y upgrade
 RUN apt-get -y install \
   vim \
+  curl \
   git \
   unzip \
   zip \
@@ -18,6 +19,7 @@ RUN apt-get -y install \
   mysql-client \
   libapache2-mod-php5 \
   php-apc \
+  php5-json \
   php5-cli \
   php5-mysql \
   php5-gd \
