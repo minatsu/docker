@@ -1,5 +1,7 @@
 FROM ubuntu:saucy
 
+MAINTAINER minatsu
+
 ENV DEBIAN_FRONTEND noninteractive
 RUN sed 's/main$/main universe/' -i /etc/apt/sources.list
 RUN apt-get update

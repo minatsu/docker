@@ -1,5 +1,7 @@
 FROM centos:latest
 
+MAINTAINER minatsu
+
 RUN yum install sudo \
   passwd \
   openssh \
