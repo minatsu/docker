@@ -4,9 +4,7 @@ MAINTAINER minatsu
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN sed 's/main$/main universe/' -i /etc/apt/sources.list
-RUN apt-get update
-RUN apt-get -y upgrade
-RUN apt-get -y install \
+RUN apt-get update; apt-get -y upgrade; apt-get -y install \
   vim \
   curl \
   git \

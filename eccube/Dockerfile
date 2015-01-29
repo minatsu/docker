@@ -4,9 +4,7 @@ MAINTAINER minatsu
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN sed 's/main$/main universe/' -i /etc/apt/sources.list
-RUN apt-get update
-RUN apt-get -y upgrade
-RUN apt-get -y install \
+RUN apt-get update; apt-get -y upgrade; apt-get -y install \
   vim \
   curl \
   git \
@@ -26,7 +24,8 @@ RUN apt-get -y install \
   php5-mysql \
   php5-gd \
   php5-mcrypt \
-  php5-curl
+  php5-curl \
+  php5-cgi
 
 RUN mkdir /var/run/sshd
 RUN echo "root:hogehoge" | chpasswd
